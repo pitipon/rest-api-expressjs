@@ -8,11 +8,17 @@ const UsersControllers = {
     },
 
     get(req, res) {
-
+        res.json({
+            user: Users.find(req.params.id)
+        })
     },
 
     create(req, res) {
-
+        const user = User.create({ email: req.body.email })
+        
+        res.json({
+            user: user
+        })
     }
 }
 
