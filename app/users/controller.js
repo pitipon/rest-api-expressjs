@@ -1,6 +1,10 @@
+import Users from './model' 
+
 const UsersControllers = {
     getAll(req, res) {
-        res.send('Hello World')
+        res.json({
+            users: Users.findAll()
+        })
     },
 
     get(req, res) {
