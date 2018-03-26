@@ -1,4 +1,5 @@
 import Users from './model' 
+import UsersSerializer from './serializer'
 
 const UsersControllers = {
     getAll(req, res) {
@@ -9,7 +10,7 @@ const UsersControllers = {
 
     get(req, res) {
         res.json({
-            user: Users.find(req.params.id)
+            user: UsersSerializer.for('get', Users.find(req.params.id))
         })
     },
 
