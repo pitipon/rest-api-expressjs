@@ -1,7 +1,7 @@
+import Serializer from '../serializer'
+
 const UsersSerializer = {
-    for(method, resource) {
-        return this[method](resource)
-    },
+    ...Serializer,
 
     get(resource) {
         const { id, email, isAdmin } = resource
