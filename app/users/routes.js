@@ -1,10 +1,11 @@
-
+import controller from './controller'
 
 const setup = (router) => {
-    
-    router.get('/', (req, res) => {
-        res.send("Hello World")
-    }) // .get('/users')
+
+    router
+        .get('/:id', controller.get)
+        .get('/', controller.getAll)
+        .post('/', controller.create)
     
 }
 
