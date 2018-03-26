@@ -1,11 +1,9 @@
-import db from '../../db'
+
+import Model from '../model'
 
 const Users = {
-
-    // find user in db
-    findAll() {
-        return db.users
-    }
+    ...Model,
+    key: 'users'
 }
 
 export default Users
