@@ -1,29 +1,29 @@
 {
-  "name": "rest-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pitipon/rest-api-expressjs.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pitipon/rest-api-expressjs/issues"
-  },
-  "homepage": "https://github.com/pitipon/rest-api-expressjs#readme",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.3"
-  },
-  "devDependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "nodemon": "^1.17.2"
-  }
+    "name": "rest-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon --exec babel-node ./index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pitipon/rest-api-expressjs.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/pitipon/rest-api-expressjs/issues"
+    },
+    "homepage": "https://github.com/pitipon/rest-api-expressjs#readme",
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "express": "^4.16.3"
+    },
+    "devDependencies": {
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "nodemon": "^1.17.2"
+    }
 }
