@@ -10,15 +10,20 @@ const Model = {
     },
 
     create(attrs) {
+        console.log("create user")
         const collection = this.collection()
+        console.log(collection)
         const record = this.withPermittedAttrs(attrs, { id: collection.length + 1 })
-    
+        console.log(record)
         this.setCollection([...collection, record])
         return record
     },
 
     update(id, attrs) {
+
+
         const collection = this.collection()
+        
         const index = this.findIndex(id)
 
         const updatedRecord = this.withPermittedAttrs(attrs, collection[index])
@@ -55,12 +60,19 @@ const Model = {
     },
 
     withPermittedAttrs(attrs, init = {}) {
-        this.permittedAttrs.reduce(
-            (record, attr) => attrs[attr] ? { ...record, [attr]: attrs[attr] } : record
+        // console.log("withPermittedAttrs")
+        // console.log(`attrs = `)
+        // console.dir(attrs) // print object
+        // console.log(this.permittedAttrs)
+        return this.permittedAttrs.reduce(
+            (record, attr) => 
+                attrs[attr] ? { ...record, [attr]: attrs[attr] } : record
             , init)
     },
 
     setCollection(collection) {
+        console.log("setCollection")
+        console.log(collection)
         db[this.key] = collection
     }
 

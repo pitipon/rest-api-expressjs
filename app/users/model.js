@@ -2,9 +2,10 @@
 import Model from '../model'
 
 const Users = {
-    ...Model,
+    
     key: 'users',
-    permittedAttrs: ['email']
+    permittedAttrs: ['email'],
+    ...Model
 }
 
 export default Users
