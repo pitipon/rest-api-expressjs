@@ -38,7 +38,9 @@ const Model = {
     },
 
     destroy(id) {
+        console.log(`destroy id:${id}`)
         const collection = this.collection()
+        
         const index = this.findIndex(id)
 
         this.setCollection([
@@ -71,8 +73,8 @@ const Model = {
     },
 
     setCollection(collection) {
-        console.log("setCollection")
-        console.log(collection)
+        // console.log("setCollection")
+        // console.log(collection)
         db[this.key] = collection
     }
 

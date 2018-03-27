@@ -28,7 +28,11 @@ const ArticlesController = {
     },
 
     destroy(req, res) {
-
+        console.log("destroy")
+        Articles.destroy(req.params.id)
+        res.json({
+            articles: "ok"
+        })
     }
 }
 
