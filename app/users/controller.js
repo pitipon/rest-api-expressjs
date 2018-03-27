@@ -1,4 +1,4 @@
-import Users from './model' 
+import { Users } from '../users' 
 import UsersSerializer from './serializer'
 
 const UsersControllers = {
