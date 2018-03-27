@@ -26,10 +26,14 @@ const UsersControllers = {
         // return user as Promise .. (we use .then)
         Users.create(email, password).then(
             
-            // return status 201 .. json response as user
-            user => res.status(201).json({
-                user: UsersSerializer.for('create', user)
-            })
+            // return Gen JasonWebToken ... status 201 .. json response as user
+            user => {
+                res
+                    .header(`Authorization`, `Bearer ${Users.genToken(user)}`)
+                    .status(201)
+                    .json({ user: UsersSerializer.for('create', user)}
+                )
+            }
         )
     }
 }

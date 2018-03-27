@@ -20,7 +20,8 @@
     "dependencies": {
         "bcrypt": "^1.0.3",
         "body-parser": "^1.18.2",
-        "express": "^4.16.3"
+        "express": "^4.16.3",
+        "jsonwebtoken": "^8.2.0"
     },
     "devDependencies": {
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
