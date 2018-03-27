@@ -22,7 +22,9 @@ const ArticlesController = {
 
     update(req, res) {
         const article = Articles.update(req.params.id, req.body)
-        
+        res.json({
+            articles: article
+        })
     },
 
     destroy(req, res) {

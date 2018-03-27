@@ -7,6 +7,7 @@ const setup = (router) => {
         .get('/', controller.getAll)
         .post('/', controller.create)
         .patch('/:id', controller.update)
+        .delete('/id', controller.destroy)
     
 }
 
