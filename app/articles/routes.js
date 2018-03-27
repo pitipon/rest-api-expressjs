@@ -6,6 +6,7 @@ const setup = (router) => {
         .get('/:id', controller.get)
         .get('/', controller.getAll)
         .post('/', controller.create)
+        .patch('/:id', controller.update)
     
 }
 
