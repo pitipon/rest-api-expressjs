@@ -5,14 +5,7 @@ import Pagination from './pagination'
 const Model = {
     ...Finder,
     ...Pagination,
-    
-    findAll() {
-        return this.collection()
-    },
 
-    find(id) {
-        return this.findRecord(id)
-    },
 
     create(attrs) {
         console.log("create user")

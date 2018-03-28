@@ -4,9 +4,16 @@ import ArticlesPolicy from './policy'
 const ArticlesController = {
     getAll(req, res) {
         // console.log(req.user)
+
+        // get query from res ... example http://127.0.0.1:3000/articles?page=1,perPage=10,categoryId=1
+        // query is sth that behind "?"
         const { page, perPage, categoryId } = req.query
+        
+        // Paginate with condition categoryId, page, perPage
         const articles = Articles.paginate({ categoryId: categoryId }, page, perPage)
-        res.json({ articles })
+        
+        
+        res.json( articles )
     },
 
     get(req, res) {
