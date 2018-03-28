@@ -3,6 +3,7 @@ import ArticlesPolicy from './policy'
 
 const ArticlesController = {
     getAll(req, res) {
+        console.log(req.user)
         res.json({ 
             articles: Articles.findAll() 
         })
