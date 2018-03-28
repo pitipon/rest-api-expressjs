@@ -1,9 +1,9 @@
 import Model from '../model'
 
-const Article = {
+const Articles = {
     ...Model,
     key: 'articles',
-    permittedAttrs: ['title', 'content', 'authorId']
+    permittedAttrs: ['title', 'content', 'authorId', 'categoryId']
 }
 
-export default Article
+export default Articles

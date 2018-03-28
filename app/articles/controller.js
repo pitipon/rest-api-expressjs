@@ -3,10 +3,10 @@ import ArticlesPolicy from './policy'
 
 const ArticlesController = {
     getAll(req, res) {
-        console.log(req.user)
-        res.json({ 
-            articles: Articles.findAll() 
-        })
+        // console.log(req.user)
+        const { page, perPage, categoryId } = req.query
+        const articles = Articles.paginate({ categoryId: categoryId }, page, perPage)
+        res.json({ articles })
     },
 
     get(req, res) {
