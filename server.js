@@ -3,6 +3,7 @@ import fs from 'fs'
 import bodyParser from 'body-parser'
 import config from './config'
 import auth from './middlewares/auth'
+import cors from 'cors'
 
 const setupRoutes = (app) => {
     const APP_DIR = `${__dirname}/app`
@@ -29,6 +30,7 @@ const setup = () => {
         app.use(auth)
         app.use(bodyParser.urlencoded({extended:true}))
         app.use(bodyParser.json())
+        app.use(cors()) // solve problem "Access-Control-Allow-Origin"
 
         setupRoutes(app)
         // app.get('/', (req, res) => {
