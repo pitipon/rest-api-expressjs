@@ -1,18 +1,13 @@
 # long term support for NodeJs
-FROM node
+FROM node:9.4.0-alpine
+
+RUN mkdir -p /app
 
 # create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
-####### install your app dependencies using the npm binary
-
-# Install app dependencies
-COPY package*.json ./
+COPY . /app/
 RUN npm install
-# RUN npm install --only=production
-
-# Bundle app source
-COPY . .
 
 # bind port 
 EXPOSE 8080
